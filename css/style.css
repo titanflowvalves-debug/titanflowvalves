@@ -447,3 +447,28 @@
   padding-left: 20px;
 }
 
+/* contact */
+/* Contact form card polish */
+#contact .card {
+  border: none;
+  border-radius: 16px;
+}
+
+#contact .form-label {
+  font-weight: 600;
+}
+
+#contact .btn-primary {
+  padding: 0.6rem 1.25rem;
+  border-radius: 12px;
+}
+
+/* Toast slide-in animation */
+.slide-in {
+  animation: toastIn 0.45s ease-out both;
+}
+@keyframes toastIn {
+  from { transform: translateY(12px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+

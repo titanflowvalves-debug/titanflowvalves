@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | Titan Flow Valves</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar bg-dark"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">Titan Flow Valves</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="about.html">About</a>
+            </li>
+
+            <!-- Products Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="products.html"
+                role="button"
+                data-bs-toggle="dropdown"
+                >Products</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="products.html#gate-valve"
+                    >Gate Valves</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="products.html#globe-valve"
+                    >Globe Valves</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="products.html#ball-valve"
+                    >Ball Valves</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Brands Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="brands.html"
+                role="button"
+                data-bs-toggle="dropdown"
+                >Brands</a
+              >
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="brands.html#ksb">KSB</a></li>
+                <li>
+                  <a class="dropdown-item" href="brands.html#audco">Audco</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Contact -->
+    <section id="contact" class="py-5 mt-5">
+      <div class="container">
+        <div class="row justify-content-center g-4">
+          <div class="col-lg-8">
+            <h2 class="mb-3 fw-bold text-center">Get in Touch</h2>
+            <p class="text-muted text-center mb-4">
+              Tell us what you need — choose your brand and product, add
+              details, and we’ll get back to you quickly.
+            </p>
+
+            <form
+              id="contactForm"
+              class="card shadow-sm p-4 needs-validation"
+              novalidate
+            >
+              <div class="row g-3">
+                <!-- Brand -->
+                <div class="col-md-6">
+                  <label for="brand" class="form-label"
+                    >Brand <span class="text-danger">*</span></label
+                  >
+                  <select id="brand" name="brand" class="form-select" required>
+                    <option value="" selected disabled>Select brand</option>
+                    <option value="KSB">KSB</option>
+                    <option value="Audco">Audco</option>
+                    <option value="L&T">L&amp;T</option>
+                    <option value="Emerson">Emerson</option>
+                    <option value="Other">Other</option>
+                  </select>
+                  <div class="invalid-feedback">Please select a brand.</div>
+                </div>
+
+                <!-- Product (populates based on brand) -->
+                <div class="col-md-6">
+                  <label for="product" class="form-label"
+                    >Product <span class="text-danger">*</span></label
+                  >
+                  <select
+                    id="product"
+                    name="product"
+                    class="form-select"
+                    required
+                    disabled
+                  >
+                    <option value="" selected disabled>Select product</option>
+                  </select>
+                  <div class="invalid-feedback">Please select a product.</div>
+                </div>
+
+                <!-- Name -->
+                <div class="col-md-6">
+                  <label for="name" class="form-label"
+                    >Full Name <span class="text-danger">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="form-control"
+                    placeholder="Your name"
+                    required
+                  />
+                  <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+
+                <!-- Email -->
+                <div class="col-md-6">
+                  <label for="email" class="form-label"
+                    >Email <span class="text-danger">*</span></label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-control"
+                    placeholder="you@example.com"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please enter a valid email.
+                  </div>
+                </div>
+
+                <!-- Mobile -->
+                <div class="col-md-6">
+                  <label for="mobile" class="form-label"
+                    >Mobile Number <span class="text-danger">*</span></label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    class="form-control"
+                    placeholder="Enter your mobile number"
+                    pattern="^[0-9+\-\s]{7,20}$"
+                    required
+                  />
+
+                  <div class="invalid-feedback">
+                    Please enter a valid phone number.
+                  </div>
+                </div>
+
+                <!-- Optional: Quantity -->
+                <div class="col-md-6">
+                  <label for="qty" class="form-label"
+                    >Quantity (optional)</label
+                  >
+                  <input
+                    type="number"
+                    id="qty"
+                    name="qty"
+                    class="form-control"
+                    min="1"
+                    placeholder="e.g., 25"
+                  />
+                </div>
+
+                <!-- Address -->
+                <div class="col-12">
+                  <label for="address" class="form-label">Address</label>
+                  <textarea
+                    id="address"
+                    name="address"
+                    rows="2"
+                    class="form-control"
+                    placeholder="Company / Delivery address"
+                  ></textarea>
+                </div>
+
+                <!-- Message -->
+                <div class="col-12">
+                  <label for="message" class="form-label"
+                    >Message</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    class="form-control"
+                    placeholder="Tell us about your requirement…"
+                  ></textarea>
+                  <div class="invalid-feedback">Please enter your message.</div>
+                </div>
+
+                <div
+                  class="col-12 d-grid d-sm-flex justify-content-sm-end gap-2 mt-2"
+                >
+                  <button type="reset" class="btn btn-outline-secondary">
+                    Reset
+                  </button>
+                  <button id="submitBtn" type="submit" class="btn btn-primary">
+                    <span class="submit-label">Send Message</span>
+                    <span
+                      class="spinner-border spinner-border-sm ms-2 d-none"
+                      role="status"
+                      aria-hidden="true"
+                    ></span>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Toast (animated alert) -->
+      <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1080">
+        <div
+          id="contactToast"
+          class="toast align-items-center text-bg-primary border-0 slide-in"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="d-flex">
+            <div class="toast-body" id="toastBody">Sending your message…</div>
+            <button
+              type="button"
+              class="btn-close btn-close-white me-2 m-auto"
+              data-bs-dismiss="toast"
+              aria-label="Close"
+            ></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-light pt-5 pb-3">
+      <div class="container">
+        <div class="row text-center text-md-start">
+          <!-- Company Motto -->
+          <div class="col-md-4 mb-4">
+            <h5 class="fw-bold">COMMAND THE FLOW. TRUST THE TITAN.</h5>
+            <p class="small text-muted">
+              Supplying high-quality industrial valves trusted by leading
+              industries worldwide.
+            </p>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="col-md-4 mb-4">
+            <h5 class="fw-bold">Get In Touch</h5>
+            <ul class="list-unstyled">
+              <li>
+                📧
+                <a
+                  href="mailto:info@titanflowvalves.com"
+                  class="text-light text-decoration-none"
+                  >info@titanflowvalves.com</a
+                >
+              </li>
+              <li>
+                📞
+                <a
+                  href="tel:+919769597643"
+                  class="text-light text-decoration-none"
+                  >+91 97695 97643</a
+                >
+              </li>
+              <li>
+                💬
+                <a
+                  href="https://wa.me/919769597643"
+                  target="_blank"
+                  class="text-light text-decoration-none"
+                  >WhatsApp: +91 97695 97643</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Address -->
+          <div class="col-md-4 mb-4">
+            <h5 class="fw-bold">Visit Us</h5>
+            <p class="mb-0">
+              506, Virani Business Park,<br />
+              Shill, Thane – 421204.<br />
+              MH, India.
+            </p>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <hr class="border-secondary" />
+
+        <!-- Copyright -->
+        <div class="text-center">
+          <p class="mb-0 small">
+            &copy; 2025 Titan Flow Valves | All Rights Reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script>
+      /* ---------- Dependent Brand -> Product ---------- */
+      const BRAND_PRODUCTS = {
+        KSB: [
+          "Gate Valve",
+          "Globe Valve",
+          "Ball Valve",
+          "Check Valve",
+          "Butterfly Valve",
+          "Other",
+        ],
+        Audco: ["Gate Valve", "Globe Valve", "Ball Valve", "Plug Valve"],
+        "L&T": ["Gate Valve", "Butterfly Valve", "Ball Valve"],
+        Emerson: ["Globe Valve", "Control Valve", "Ball Valve"],
+        Other: ["Other"],
+      };
+
+      (function initContactForm() {
+        const brandSel = document.getElementById("brand");
+        const prodSel = document.getElementById("product");
+        const form = document.getElementById("contactForm");
+        const submitBtn = document.getElementById("submitBtn");
+        const spinner = submitBtn?.querySelector(".spinner-border");
+        const submitLbl = submitBtn?.querySelector(".submit-label");
+
+        if (!brandSel || !prodSel || !form) return;
+
+        brandSel.addEventListener("change", () => {
+          const brand = brandSel.value;
+          prodSel.innerHTML = `<option value="" selected disabled>Select product</option>`;
+          if (BRAND_PRODUCTS[brand]) {
+            BRAND_PRODUCTS[brand].forEach((p) => {
+              const opt = document.createElement("option");
+              opt.value = p;
+              opt.textContent = p;
+              prodSel.appendChild(opt);
+            });
+            prodSel.disabled = false;
+          } else {
+            prodSel.disabled = true;
+          }
+        });
+
+        /* ---------- Bootstrap validation ---------- */
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+          if (!form.checkValidity()) {
+            form.classList.add("was-validated");
+            return;
+          }
+
+          // UI: loading state
+          submitBtn.disabled = true;
+          spinner.classList.remove("d-none");
+          submitLbl.textContent = "Sending…";
+
+          // Toast in "sending" mode
+          showToast("Sending your message…", "primary");
+
+          // Gather data
+          const data = {
+            brand: brandSel.value,
+            product: prodSel.value,
+            name: document.getElementById("name").value.trim(),
+            email: document.getElementById("email").value.trim(),
+            mobile: document.getElementById("phone").value.trim(),
+            qty: document.getElementById("qty")?.value || "",
+            address: document.getElementById("address").value.trim(),
+            message: document.getElementById("message").value.trim(),
+          };
+
+          try {
+            // Prefer EmailJS if available
+            if (window.emailjs) {
+              // TODO: replace with your actual IDs from EmailJS
+              const SERVICE_ID = "service_p1maaqf";
+              const TEMPLATE_ID = "template_fekqak8";
+              const PUBLIC_KEY = "u5fvWbL_XsE7sdchq";
+
+              emailjs.init(PUBLIC_KEY);
+              await emailjs.send(SERVICE_ID, TEMPLATE_ID, {
+                name: data.name,
+                email: data.email,
+                mobile: data.mobile,
+                brand: data.brand,
+                product: data.product,
+                qty: data.qty,
+                address: data.address,
+                message: data.message,
+                time: new Date().toLocaleString(),
+                subject: `Enquiry: ${data.brand} - ${data.product}`,
+              });
+
+              showToast(
+                "Thank you! Your message has been sent successfully.",
+                "success"
+              );
+              form.reset();
+              prodSel.disabled = true;
+              form.classList.remove("was-validated");
+            } else {
+              // Fallback: open user's mail client
+              const mailto = buildMailto(data);
+              window.location.href = mailto;
+              showToast("Opening your email client…", "primary");
+            }
+          } catch (err) {
+            console.error(err);
+            showToast(
+              "Oops! Something went wrong. Please try again or email us directly.",
+              "danger"
+            );
+          } finally {
+            submitBtn.disabled = false;
+            spinner.classList.add("d-none");
+            submitLbl.textContent = "Send Message";
+          }
+        });
+      })();
+
+      /* ---------- Toast helper ---------- */
+      function showToast(message, type /* primary|success|danger */) {
+        const toastEl = document.getElementById("contactToast");
+        const bodyEl = document.getElementById("toastBody");
+        if (!toastEl || !bodyEl) return;
+
+        // swap contextual bg class
+        toastEl.classList.remove(
+          "text-bg-primary",
+          "text-bg-success",
+          "text-bg-danger"
+        );
+        toastEl.classList.add(`text-bg-${type}`);
+        bodyEl.textContent = message;
+
+        const toast = bootstrap.Toast.getOrCreateInstance(toastEl, {
+          delay: 3000,
+        });
+        toast.show();
+      }
+
+      /* ---------- mailto fallback ---------- */
+      function buildMailto(data) {
+        const to = "info@titanflowvalves.com"; // change if needed
+        const subject = `Enquiry: ${data.brand} - ${data.product}`;
+        const body = `Name: ${data.name}
+Email: ${data.email}
+Mobile: ${data.mobile}
+Brand: ${data.brand}
+Product: ${data.product}
+Quantity: ${data.qty || "-"}
+Address: ${data.address || "-"}
+
+Message:
+${data.message}`;
+        return `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(
+          subject
+        )}&body=${encodeURIComponent(body)}`;
+      }
+    </script>
+  </body>
+</html>
